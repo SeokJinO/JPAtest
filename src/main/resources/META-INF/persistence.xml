@@ -7,12 +7,14 @@
 
     <persistence-unit name="jpabook">
         <class>com.example.jpatest.Member</class>
+        <class>com.example.jpatest.Board</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://ohome.iptime.org:53306/jpa" />
             <property name="javax.persistence.jdbc.user" value="root" />
             <property name="javax.persistence.jdbc.password" value="P@ssw0rd" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"></property>
             <!-- hibernate.hdm2ddl.auto속성 정리
                 create : 기존 테이블을 삭제하고 새로 생성한다. DROP + CREATE
                 create-drop : create 속성에 추가로 애플리케이션을 종료할 때 생성한 DDL을 제거한다. DROP + CREATE + DROP

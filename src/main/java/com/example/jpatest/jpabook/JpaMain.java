@@ -9,7 +9,7 @@ public class JpaMain {
     static EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpabook");
     public static void main(String[] args) {
 
-        Member member = createMember("memberE", "회원1");
+        Member member = createMember("memberF", "회원3");
 
         member.setUsername("회원명 변경"); // 준영속 상태에서 변경
         System.out.println(member);
